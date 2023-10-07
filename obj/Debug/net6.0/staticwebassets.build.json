@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DTfRcpU6qLLSzWJfwRDuMnIk/Xj8jgqOdtXTktI/SaU=",
+  "Source": "msrtc-api",
+  "BasePath": "_content/msrtc-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
