@@ -23,26 +23,6 @@ namespace msrtc_api.Controllers
         {
             try
             {
-                //var list =
-                //from bs in _context.Bussess
-                //join s in _context.BusStopsModel on bs.BusID equals s.BusID
-                //select new
-                //{
-                //    bs.BusID,
-                //    bs.BusDepo,
-                //    bs.BusTime,
-                //    bs.Source,
-                //    bs.Destination,
-                //    bs.Via,
-                //    bs.BusRoute,
-                //    bs.BusType,
-                //    s.Stop,
-                //    s.Time
-
-
-                //};
-
-                //   return await _context.Bussess.OrderBy(x=>x.BusTime).Include(x => x.Stops).ToListAsync();
                 return await _context.Bussess.Select(x => new BussessModel()
                 {
                     BusID = x.BusID,

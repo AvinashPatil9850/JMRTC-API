@@ -16,6 +16,7 @@ namespace msrtc_api.Data
         public virtual DbSet<DestinationArr> DestinationArr { get; set; }
         public virtual DbSet<StopsListModel> StopsListModel { get; set; }
         public virtual DbSet<StopDetail> StopDetail { get; set; }
+        public virtual DbSet<BusDepoModal> BusDepoDetail { get; set; }
 
     }
 }

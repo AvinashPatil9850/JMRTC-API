@@ -12,11 +12,13 @@ namespace msrtc_api.Controllers
         {
             _context = context;
         }
+
+        // destination as per depo
         [HttpGet]
-        [Route("GetAllDestinationList")]
+        [Route("GetAllDestinationDetail")]
         
 
-        public async Task<ActionResult<IEnumerable<DestinationModal>>> GetAllDestinationList()
+        public async Task<ActionResult<IEnumerable<DestinationModal>>> GetAllDestinationDetail()
         {
             try
             {
@@ -29,7 +31,7 @@ namespace msrtc_api.Controllers
                                ds.Destination,
                                ds.DestinationID
                            };
-                return Ok(list);
+                return Ok(list.Distinct());
 
             }
             catch (Exception ex)
@@ -37,11 +39,16 @@ namespace msrtc_api.Controllers
                 return this.StatusCode(500, ex.Message);
             }
         }
+
+        /// <summary>
+        /// get all destination list from all depo
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        [Route("GetDestinationArr")]
-        public async Task<ActionResult<IEnumerable<DestinationArr>>> GetDestinationArr()
+        [Route("GetDestinationList")]
+        public async Task<ActionResult<IEnumerable<DestinationArr>>> GetDestinationList()
         {
-            return Ok(await _context.DestinationArr.ToListAsync());
+            return Ok(await _context.DestinationArr.Distinct().ToListAsync());
         }
 
 

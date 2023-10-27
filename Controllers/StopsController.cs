@@ -35,7 +35,7 @@ namespace msrtc_api.Controllers
                                sa.StopID,
                                sa.StopName
                            };
-                       return Ok(list);
+                       return Ok(list.Distinct());
                // return await _context.StopsListModel.Include(x => x.StopsList).ToListAsync();
             }
             catch (Exception ex)
